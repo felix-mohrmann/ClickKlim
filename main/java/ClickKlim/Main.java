@@ -1,13 +1,20 @@
 package ClickKlim;
 
-import java.applet.*;
 import java.awt.*;
+import javax.swing.*;
 
-public final class Main extends Applet{
-	 public void paint( Graphics g )
-	  {
-		 Font h = new Font("test", 0, 100);
-		 g.setFont(h);
-	     g.drawString( "Hallo Welt!", 100, 100 );
-	  }
+public final class Main{
+
+    private static final int WIDTH = 800;
+    private static final int HEIGHT = 400;
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame();
+        frame.setSize(new Dimension(WIDTH, HEIGHT));
+        frame.setResizable(false);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLocationRelativeTo(null);
+        frame.add(new Display());
+        frame.setVisible(true);
+    }
 }
