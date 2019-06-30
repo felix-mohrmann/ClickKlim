@@ -2,35 +2,44 @@ package ClickKlim;
 
 public class GameValues {
 	
-	private double cookies;
-	private double cookieClickGain;
+	private double milk;
+	private double milkClickGain;
 	private double percentageClickGain;
-	private double cookieAutoGain;
+	private double milkAutoGain;
 	private double percentageAutoGain;
 	private double storage;
 	
 	public GameValues() {
-		cookies = 0;
-		cookieClickGain = 1;
+		milk = 0;
+		milkClickGain = 1;
 		percentageClickGain = 1;
-		cookieAutoGain = 0;
+		milkAutoGain = 0;
 		percentageAutoGain = 1;
 		storage = 100;
 	}
 	
+	public GameValues(double milk, double milkClickGain, double percentageClickGain, double milkAutoGain, double percentageAutoGain, double storage) {
+		this.milk = milk;
+		this.milkClickGain = milkClickGain;
+		this.percentageClickGain = percentageClickGain;
+		this.milkAutoGain = milkAutoGain;
+		this.percentageAutoGain = percentageAutoGain;
+		this.storage = storage;
+	}
+	
 	//cookies
 	public double getCookies() {
-		return cookies;
+		return milk;
 	}
 	public void setCookies(double cookies) {
-		this.cookies = cookies;
+		this.milk = cookies;
 	}
 	//cookieClickGain
 	public double getCookieClickGain() {
-		return cookieClickGain;
+		return milkClickGain;
 	}
 	public void setCookieClickGain(double cookieClickGain) {
-		this.cookieClickGain = cookieClickGain;
+		this.milkClickGain = cookieClickGain;
 	}
 	//percentageClickGain
 	public double getPercentageClickGain() {
@@ -41,11 +50,11 @@ public class GameValues {
 	}
 	//cookieAutoGain
 	public double getCookieAutoGain() {
-		return cookieAutoGain;
+		return milkAutoGain;
 	}
 
 	public void setCookieAutoGain(double cookieAutoGain) {
-		this.cookieAutoGain = cookieAutoGain;
+		this.milkAutoGain = cookieAutoGain;
 	}
 	//percentageAutoGain
 	public double getPercentageAutoGain() {
