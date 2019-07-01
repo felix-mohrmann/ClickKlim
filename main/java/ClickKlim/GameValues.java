@@ -28,18 +28,18 @@ public class GameValues {
 	}
 	
 	//cookies
-	public double getCookies() {
+	public double getMilk() {
 		return milk;
 	}
-	public void setCookies(double cookies) {
-		this.milk = cookies;
+	public void setMilk(double milk) {
+		this.milk = milk;
 	}
 	//cookieClickGain
-	public double getCookieClickGain() {
+	public double getMilkClickGain() {
 		return milkClickGain;
 	}
-	public void setCookieClickGain(double cookieClickGain) {
-		this.milkClickGain = cookieClickGain;
+	public void setMilkClickGain(double MilkClickGain) {
+		this.milkClickGain = MilkClickGain;
 	}
 	//percentageClickGain
 	public double getPercentageClickGain() {
@@ -49,12 +49,11 @@ public class GameValues {
 		this.percentageClickGain = percentageClickGain;
 	}
 	//cookieAutoGain
-	public double getCookieAutoGain() {
+	public double getMilkAutoGain() {
 		return milkAutoGain;
 	}
-
-	public void setCookieAutoGain(double cookieAutoGain) {
-		this.milkAutoGain = cookieAutoGain;
+	public void setMilkAutoGain(double milkAutoGain) {
+		this.milkAutoGain = milkAutoGain;
 	}
 	//percentageAutoGain
 	public double getPercentageAutoGain() {
