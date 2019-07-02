@@ -8,7 +8,7 @@ public class Display extends JPanel {
     private static final long serialVersionUID = 1L;
 
     public Display() {
-        setLayout(null);
+        setLayout(new BorderLayout());
         repaint();
     }
 
