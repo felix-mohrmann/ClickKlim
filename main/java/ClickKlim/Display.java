@@ -1,18 +1,14 @@
 package ClickKlim;
 
-import java.awt.*;
 import javax.swing.*;
 
 public class Display extends JPanel {
 
     private static final long serialVersionUID = 1L;
 
-    public Display(GameValues gameData) {
-        //setLayout
-        this.setLayout(new BorderLayout());
-
+    public Display(String type, double value) {
         //Create label
-        JLabel label = new JLabel("Milk: " + gameData.getMilk());
+        JLabel label = new JLabel(type + ": " + value);
 
         //Add label to panel
         this.add(label);
@@ -20,12 +16,12 @@ public class Display extends JPanel {
         // repaint();
     }
 
-	public void paint(Graphics g){
-        super.paintComponent(g);
-        // setBackground(Color.black);
-        g.setColor(Color.WHITE);
-        Font h = new Font("test", 0, 100);
-        // g.setFont(h);
-        // g.drawString("Hello World!", 100, 100);
-    }
+	// public void paint(Graphics g){
+    //     super.paintComponent(g);
+    //     setBackground(Color.black);
+    //     g.setColor(Color.WHITE);
+    //     Font h = new Font("test", 0, 100);
+    //     g.setFont(h);
+    //     g.drawString("Hello World!", 100, 100);
+    // }
 }
