@@ -9,38 +9,23 @@ public final class Main{
     private static final int HEIGHT = 500;
     
     public static void main(String[] args) {
-        // Display display = new Display();
-        // GameValues gameData = new GameValues();
         createWindow();
     }
 
     static void createWindow(){
-        
-        //Create panel
-        JPanel panel = new JPanel();
-        panel.setLayout(new BorderLayout());
+        GameValues gameData = new GameValues();
 
-        //Build the frame
-        JFrame frame = new JFrame("Window");
+        //Create the frame
+        JFrame frame = new JFrame("ClickKlim");
         frame.setSize(new Dimension(WIDTH, HEIGHT));
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
 
-        //Create button
-        // JButton button = new JButton("I am a button");
+        Display milkDisplay = new Display(gameData);
 
-        //Create label
-        JLabel label = new JLabel("Milk: ");
-
-        //Add label and button to panel
-        panel.add(label);
-        // panel.add(button);
-
-        //Add panel to frame
-        frame.add(panel);
-
-        //Make the frame visible
+        //Add the display to the frame and make it visible
+        frame.add(milkDisplay);
         frame.setVisible(true);
     }
 }
