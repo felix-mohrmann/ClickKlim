@@ -1,6 +1,8 @@
 package ClickKlim;
 
 import java.awt.*;
+import java.awt.event.KeyEvent;
+
 import javax.swing.*;
 
 public final class Main{
@@ -23,11 +25,50 @@ public final class Main{
         frame.setLocationRelativeTo(null);
         frame.setLayout(new FlowLayout());
 
+        // Create the MenuBar
+        JMenuBar menubar = new JMenuBar();
+
+        JMenu game = new JMenu("Game");
+        game.setMnemonic(KeyEvent.VK_S);
+        game.getAccessibleContext().setAccessibleDescription("Everything you need for the game.");
+        menubar.add(game);
+
+        JMenuItem start = new JMenuItem("Start");
+        game.add(start);
+
+        game.addSeparator();
+        JMenuItem save = new JMenuItem("Save");
+        game.add(save);
+
+        JMenuItem load = new JMenuItem("Load");
+        game.add(load);
+
+        JMenu help = new JMenu("Help");
+        help.getAccessibleContext().setAccessibleDescription("Need help?");
+        menubar.add(help);
+
+        JMenuItem instructions = new JMenuItem("Instructions");
+        help.add(instructions);
+
+        JMenuItem keyboardShortcuts = new JMenuItem("Keyboard Shortcuts");
+        help.add(keyboardShortcuts);
+
+        help.addSeparator();
+        JMenu about = new JMenu("About");
+        help.add(about);
+
+        JMenuItem description = new JMenuItem("Description");
+        about.add(description);
+
+        JMenuItem log = new JMenuItem("Log");
+        about.add(log);
+
         // Create the Panel's
         Display milkPanel = new Display("Milk", gameData.getMilk());
         Display storagePanel = new Display("Storage", gameData.getStorage());
         
-        // Add the Panel's to the frame and make the frame visible
+        // Add everything to the frame and make it visible
+        frame.setJMenuBar(menubar);
         frame.add(milkPanel);
         frame.add(storagePanel);
         frame.setVisible(true);
