@@ -9,7 +9,7 @@ public class updateDisplay implements Runnable{
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			Main.getD1().updateLabel();
+			Main.getGameScreen().updateLabel();
 		}
 	}
 }

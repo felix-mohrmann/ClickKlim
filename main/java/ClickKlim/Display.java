@@ -8,7 +8,7 @@ import javax.swing.*;
 public class Display extends JPanel {
 
     private static final long serialVersionUID = 1L;
-    public static ArrayList<JLabel> labels = new ArrayList<JLabel>();
+    private static ArrayList<JLabel> labels = new ArrayList<JLabel>();
 
     private static final int WIDTH = 1250;
     private static final int HEIGHT = 750;
@@ -65,8 +65,8 @@ public class Display extends JPanel {
         JMenuItem log = new JMenuItem("Log");
         about.add(log);
 
-        createLabel("milk", data.getMilk());
-        createLabel("storage", data.getStorage());
+        createLabel("Milk", data.getMilk());
+        createLabel("Storage", data.getStorage());
         
         // Add everything to the frame and make it visible
         frame.setJMenuBar(menubar);
@@ -83,7 +83,7 @@ public class Display extends JPanel {
     
     public void updateLabel() {
     	labels.get(0).setText("Milk: " + Main.getGameData().getMilk());
-    	labels.get(1).setText("Storage: 50");
+    	labels.get(1).setText("Storage: " + Main.getGameData().getStorage());
     }
 	
 }

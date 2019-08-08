@@ -2,7 +2,7 @@ package ClickKlim;
 
 public final class Main{
 	
-	private static Display d1;
+	private static Display gameScreen;
 	private static GameValues gameData;
 	
     public static void main(String[] args) {
@@ -12,12 +12,14 @@ public final class Main{
         while(true) {
         	if(gameData.getMilk() == 100) {
         		gameData.setMilk(50);
+        		gameData.setStorage(1000);
         	}
         	else {
         		gameData.setMilk(100);
+        		gameData.setStorage(3000);
         	}
         	try {
-				Thread.sleep(100);
+				Thread.sleep(500);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -26,17 +28,16 @@ public final class Main{
 
     static void createWindow(){
         gameData = new GameValues();
-
-        d1 = new Display(gameData);
+        gameScreen = new Display(gameData);
     }
 
     
     
-	public static Display getD1() {
-		return d1;
+	public static Display getGameScreen() {
+		return gameScreen;
 	}
-	public static void setD1(Display d1) {
-		Main.d1 = d1;
+	public static void setGameScreen(Display d1) {
+		Main.gameScreen = d1;
 	}
 
 	public static GameValues getGameData() {
