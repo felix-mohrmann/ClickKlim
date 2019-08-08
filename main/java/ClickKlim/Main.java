@@ -9,6 +9,19 @@ public final class Main{
         createWindow();
         Thread updateDisplay = new Thread(new updateDisplay());
         updateDisplay.start();
+        while(true) {
+        	if(gameData.getMilk() == 100) {
+        		gameData.setMilk(50);
+        	}
+        	else {
+        		gameData.setMilk(100);
+        	}
+        	try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+        }
     }
 
     static void createWindow(){
