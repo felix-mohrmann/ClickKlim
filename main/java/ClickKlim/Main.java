@@ -64,13 +64,16 @@ public final class Main{
         about.add(log);
 
         // Create the Panel's
-        Display milkPanel = new Display("Milk", gameData.getMilk());
-        Display storagePanel = new Display("Storage", gameData.getStorage());
+//        Display milkPanel = new Display("Milk", gameData.getMilk());
+//        Display storagePanel = new Display("Storage", gameData.getStorage());
+        Display valueLabels = new Display();
+        valueLabels.createLabel("milk", gameData.getMilk());
+        valueLabels.createLabel("storage", gameData.getStorage());
         
         // Add everything to the frame and make it visible
         frame.setJMenuBar(menubar);
-        frame.add(milkPanel);
-        frame.add(storagePanel);
+        frame.add(valueLabels.labels.get(0));
+        frame.add(valueLabels.labels.get(1));
         frame.setVisible(true);
     }
 }

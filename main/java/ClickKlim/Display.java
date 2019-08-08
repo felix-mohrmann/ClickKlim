@@ -1,27 +1,22 @@
 package ClickKlim;
 
+import java.util.ArrayList;
 import javax.swing.*;
 
 public class Display extends JPanel {
 
     private static final long serialVersionUID = 1L;
+    public static ArrayList<JLabel> labels = new ArrayList<JLabel>();
 
-    public Display(String type, double value) {
-        //Create label
-        JLabel label = new JLabel(type + ": " + value);
-
-        //Add label to panel
-        this.add(label);
-
-        // repaint();
+    public Display() {
+//        JLabel label = new JLabel(type + ": " + value);		//Create label
+//        this.add(label);		//Add label to panel
     }
 
-	// public void paint(Graphics g){
-    //     super.paintComponent(g);
-    //     setBackground(Color.black);
-    //     g.setColor(Color.WHITE);
-    //     Font h = new Font("test", 0, 100);
-    //     g.setFont(h);
-    //     g.drawString("Hello World!", 100, 100);
-    // }
+    public void createLabel(String type, double value) {
+        JLabel label = new JLabel(type + ": " + value);		//Create label
+        this.add(label);		//Add label to panel
+        labels.add(label);
+    }
+	
 }
