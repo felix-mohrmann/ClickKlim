@@ -1,6 +1,6 @@
 package ClickKlim;
 
-public class updateDisplay implements Runnable{
+public class updateGame implements Runnable{
 	@Override
 	public void run() {
 		while(true) {

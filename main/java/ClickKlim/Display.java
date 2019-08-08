@@ -84,5 +84,4 @@ public class Display extends JPanel {
     	labels.get(0).setText("Milk: " + Main.getGameData().getMilk());
     	labels.get(1).setText("Storage: " + Main.getGameData().getStorage());
     }
-	
 }
