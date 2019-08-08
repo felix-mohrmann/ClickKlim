@@ -1,8 +1,6 @@
 package ClickKlim;
 
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-import java.awt.event.KeyEvent;
+import java.awt.*;
 import java.util.ArrayList;
 import javax.swing.*;
 
