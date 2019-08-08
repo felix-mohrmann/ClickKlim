@@ -7,7 +7,7 @@ public final class Main{
 	
     public static void main(String[] args) {
         createWindow();
-        Thread updateDisplay = new Thread( new updateDisplay() );
+        Thread updateDisplay = new Thread(new updateDisplay());
         updateDisplay.start();
     }
 

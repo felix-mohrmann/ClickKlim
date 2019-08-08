@@ -82,7 +82,8 @@ public class Display extends JPanel {
     }
     
     public void updateLabel() {
-    	
+    	labels.get(0).setText("Milk: 50");
+    	labels.get(1).setText("Storage: 50");
     }
 	
 }
