@@ -80,5 +80,9 @@ public class Display extends JPanel {
         this.add(label);		//Add label to panel
         labels.add(label);
     }
+    
+    public void updateLabel() {
+    	
+    }
 	
 }
