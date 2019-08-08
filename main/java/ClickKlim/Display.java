@@ -8,13 +8,12 @@ import javax.swing.*;
 public class Display extends JPanel {
 
     private static final long serialVersionUID = 1L;
-    private static ArrayList<JLabel> labels = new ArrayList<JLabel>();
-
     private static final int WIDTH = 1250;
     private static final int HEIGHT = 750;
 
-    public Display (GameValues data) {
-        
+    private static ArrayList<JLabel> labels = new ArrayList<JLabel>();
+
+    public Display (GameValues data) { 
         createFrame(data);
     }
 

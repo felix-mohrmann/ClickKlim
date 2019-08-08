@@ -29,9 +29,7 @@ public final class Main{
     static void createWindow(){
         gameData = new GameValues();
         gameScreen = new Display(gameData);
-    }
-
-    
+    } 
     
 	public static Display getGameScreen() {
 		return gameScreen;
